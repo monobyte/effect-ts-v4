@@ -1,28 +1,17 @@
-# Effect 4.0 Agent Skill
+# Effect v4 Agent Skill
 
-An agent skill for [Effect 4.0](https://github.com/Effect-TS/effect-smol) (TypeScript). Enables AI coding agents to understand and write Effect v4 code accurately.
+Curated, self-contained Effect v4 guidance for AI coding agents.
 
 ## Install
 
-```bash
-npx skills add zwarunek/effect-skill
+```sh
+npx skills add monobyte/effect-ts-v4
 ```
 
-## Source Reference
+The skill keeps a small entry point and topic guides that agents can read as needed. Each guide explains the relevant choices, current API conventions, common mistakes and focused examples.
 
-These docs were written against **Effect 4.0 beta 9** (`effect@4.0.0-beta.9`), commit `7cb4f16653cc1394fa4329f8ffdf65f895f98f52` from [Effect-TS/effect-smol](https://github.com/Effect-TS/effect-smol).
+Coverage includes core Effect, services/layers, data types, concurrency, streaming, Schema, transactions, application patterns, migration and ecosystem wiring. Focused guides cover HTTP/SQL, AI, batching/GraphQL, testing/observability and CLI/child processes.
 
-## What's Covered
+Reference material is embedded as Markdown. No library source, example source tree or generated API catalogue is bundled.
 
-| File | Topics |
-|------|--------|
-| `docs/01-core-effect.md` | Effect type, pipe/flow, Effect.gen, Result, Exit, Cause, Scope |
-| `docs/02-services-layers.md` | ServiceMap.Service, Layer, Config, ConfigProvider, ManagedRuntime |
-| `docs/03-data-types.md` | Option, Array, Chunk, HashMap, HashSet, Duration, DateTime, Data, Brand |
-| `docs/04-concurrency.md` | Fiber, Ref, Queue, PubSub, Deferred, Pool, Cache, Semaphore, Schedule |
-| `docs/05-streaming.md` | Stream, Sink, Channel, Pull |
-| `docs/06-schema.md` | Schema, SchemaAST, Optic, validation, parsing |
-| `docs/07-transactions.md` | TxRef, TxHashMap, TxHashSet, TxQueue, Effect.atomic |
-| `docs/08-patterns.md` | RcRef, RcMap, ScopedRef, LayerMap, Match, composition patterns |
-| `docs/09-migration.md` | v3 to v4 migration, all breaking changes |
-| `docs/10-ecosystem.md` | HTTP, RPC, SQL, CLI, AI, Cluster, testing, platform |
+The guides were checked against [Effect's AI documentation](https://github.com/Effect-TS/effect/tree/main/ai-docs/src) and current public APIs at commit `4d003f90ca39caca54fb0c495cf82e6a159d63f0`. Check the application's installed versions when using individual APIs. Adapted upstream examples retain the [upstream licence](effect-ts-v4/docs/LICENSE.effect).
